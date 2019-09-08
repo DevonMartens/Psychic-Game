@@ -1,0 +1,55 @@
+body {
+    position: relative;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30pt;
+    color: blue ;
+    background-image: url(yellowstone.jpg);
+}
+
+
+
+/*make text visablw*/
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    clear: both;
+  }
+  
+
+h1 {
+    padding: 20px;
+    background-color: white;
+    font-weight: bold;
+    font-size: 30pt;
+    text-align: center;
+    color: red;
+     
+}
+
+p {
+    font-weight: bold;
+    text-align: center;
+    font-size: 15pt;
+    color: blue;
+}
+/*make text visablw*/
+#main-container {
+    padding-top: 130px;
+    min-height: calc(100vh - 70px);
+  }
+  
+  .main-section {
+      position: absolute;
+    float: left;
+    width: 100%;
+    max-width: 960px;
+    padding: 30px;
+    margin: 0 0 40px;
+    background: #ffffff;
+    border: 1px solid #dddddd;
+  }
+  
+  
