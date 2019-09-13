@@ -38,6 +38,7 @@ document.onkeyup = function (event) {
     }
   
     if (guessesLeft == 0) {
+        alert("you loose.")
       losses++;
       guessesLeft = 10;
       guessedLetters = [];
