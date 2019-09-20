@@ -25,7 +25,7 @@ var guessedLetters = [];
 document.onkeyup = function (event) {
 //3 possibilities for guesses
     userGuess = event.key;
-//already guessed
+//already guessed add guess to html (includes) 
     if (guessedLetters.includes(userGuess)) {
         var html = "You already guessed " + userGuess + "!";
         return document.getElementById("game").innerHTML = html;
@@ -54,7 +54,7 @@ document.onkeyup = function (event) {
       guessesLeft = 10;
       guessedLetters = [];
     }
-
+//unsure if needed to put all variables in if else statement. only way to get it working could have been syntax.
   
 //changing html section
 //prompt
