@@ -1,8 +1,18 @@
+
+
+//computer player 2 things chooses guesses
 var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+
+//generates random guese
 var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
+
+//win loose score
 var wins = 0;
 var losses = 0;
+
+
+//total guesses array to keep guesses
 var guessesLeft = 10;
 var guessedLetters = [];
 
@@ -11,11 +21,11 @@ var guessedLetters = [];
 
 
 
-
+//start
 document.onkeyup = function (event) {
-
+//3 possibilities for guesses
     userGuess = event.key;
-
+//already guessed
     if (guessedLetters.includes(userGuess)) {
         var html = "You already guessed " + userGuess + "!";
         return document.getElementById("game").innerHTML = html;
@@ -23,7 +33,7 @@ document.onkeyup = function (event) {
         
     }
 
-
+//correct
     if (computerGuess == userGuess) {
     alert("you win!!")
       wins++;
@@ -31,6 +41,7 @@ document.onkeyup = function (event) {
       guessedLetters = [];
       computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
     }
+    //wrong
     
     if (computerGuess != userGuess) {
       guessesLeft--;
@@ -45,7 +56,13 @@ document.onkeyup = function (event) {
     }
 
   
-    
+//changing html section
+//prompt
+//wins
+//loose
+//guesses
+//seeing already guessed
+ 
     var html =
       "<p>Guess what letter I am thinking of!</p>" + "<br>" +
       "<p>Wins: " + wins + "</p>" +
@@ -54,3 +71,5 @@ document.onkeyup = function (event) {
       "<p>Your Guesses So Far: " + guessedLetters + "</p>";
   document.getElementById("game").innerHTML = html;
   }
+
+//i couldn't get hangman... will work on. hopefully that does not impact score
